@@ -1,10 +1,13 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    positive_nums = {}
+    for i in a:
+        if i > 0 and -i in a:
+            positive_nums[i] = -i
 
+    result = list(positive_nums.keys())
     return result
+
+    
 
 
 if __name__ == "__main__":
