@@ -3,11 +3,17 @@
 
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    split_paths = []
+    result = []
+    for path in files:
+        split_paths.append(path.split("/"))
 
+    hash_table = dict(zip(files, split_paths))
+
+    for query in queries:
+        for key,value in hash_table.items():
+            if query in value:
+                result.append(key)
     return result
 
 
